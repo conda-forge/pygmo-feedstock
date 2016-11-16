@@ -33,7 +33,6 @@ conda search pygmo --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
