@@ -1,13 +1,13 @@
 About pygmo
 ===========
 
-Home: http://esa.github.io/pygmo/
+Home: https://esa.github.io/pagmo2/
 
-Package license: GPL3
+Package license: GPL v3 and LGPL v3
 
 Feedstock license: BSD 3-Clause
 
-Summary: Parallel Global Multiobjective Optimizer
+Summary: A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model
 
 
 
@@ -16,7 +16,7 @@ Current build status
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pygmo-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pygmo-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pygmo-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pygmo-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pygmo-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pygmo-feedstock/branch/master)
 
 Current release info
 ====================
