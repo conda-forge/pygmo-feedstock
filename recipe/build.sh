@@ -1,13 +1,18 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-mkdir -p build && cd build
+mkdir build
+cd build
 
 cmake \
-  -DCMAKE_FIND_ROOT_PATH=${PREFIX} \
-  -DCMAKE_INSTALL_PREFIX=${PREFIX} \
-  -DBUILD_PYGMO=ON \
-  -DENABLE_TESTS=ON \
-  -DPYTHON_MODULES_DIR=${SP_DIR} \
-  ..
-make install -j${CPU_COUNT}
-ctest --output-on-failure -j${CPU_COUNT}
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DCMAKE_PREFIX_PATH=$PREFIX \
+    -DPAGMO_WITH_EIGEN3=yes \
+    -DPAGMO_WITH_NLOPT=yes  \
+    -DPAGMO_INSTALL_HEADERS=no \
+    -DPAGMO_BUILD_PYGMO=yes \
+    ..
+
+make
+
+make install
