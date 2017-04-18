@@ -1,41 +1,45 @@
-{% set version = "1.1.7" %}
+{% set version = "2.0" %}
 
 package:
   name: pygmo
   version: {{ version }}
 
 source:
-  fn: pagmo-{{ version }}.tar.gz
-  url: https://github.com/esa/pagmo/archive/{{ version }}.tar.gz
-  sha256: 6d8fab89ef9d5d5f30f148225bf9b84b2e5a38997f3d68b85547840e9fd95172
+  url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
+  sha256: 022af6bad2f1d083c2cacf4b121722541df80b6f168519a8eba0709cef02163a
 
 build:
-  number: 2
-
-  # https://github.com/esa/pagmo/issues/94
-  skip: true  # [win]
+  number: 0
+  skip: true  # [(win and py27) or win32]
 
 requirements:
   build:
     - toolchain
-    - python
     - cmake
-    - boost 1.63.*
-  run:
+    - eigen
+    - nlopt
+    - boost     1.63.*
+    - numpy     x.x
+    - dill
+    - ipyparallel
     - python
-    - boost 1.63.*
-
-test:
-  imports:
-    - PyGMO
+  run:
+    - nlopt
+    - boost     1.63.*
+    - numpy     x.x
+    - dill
+    - ipyparallel
+    - python
 
 about:
-  home: http://esa.github.io/pygmo/
-  license: GPL3
-  license_file: LICENSE.txt
-  summary: Parallel Global Multiobjective Optimizer
+  home: https://esa.github.io/pagmo2/
+  license: GPL v3 and LGPL v3
+  license_file: COPYING.lgpl3
+  summary: 'A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model'
 
 extra:
   recipe-maintainers:
     - xantares
     - ccordoba12
+    - bluescarni
+    - darioizzo
