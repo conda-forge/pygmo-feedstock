@@ -34,12 +34,14 @@ requirements:
     - python
 
 about:
-  home: https://github.com/esa/pagmo2
+  home: https://esa.github.io/pagmo2/
   license: GPL v3 and LGPL v3
   license_file: COPYING.lgpl3
   summary: 'A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model'
 
 extra:
   recipe-maintainers:
+    - xantares
+    - ccordoba12
     - bluescarni
     - darioizzo
