@@ -19,16 +19,14 @@ requirements:
     - eigen
     - nlopt
     - boost     1.63.*
-    - numpy     x.x      # [not osx]
-    - numpy     1.12.*   # [osx]
+    - numpy     x.x
     - dill
     - ipyparallel
     - python
   run:
     - nlopt
     - boost     1.63.*
-    - numpy     x.x      # [not osx]
-    - numpy     1.12.*   # [osx]
+    - numpy     x.x
     - dill
     - ipyparallel
     - python
