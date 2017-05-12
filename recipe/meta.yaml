@@ -1,4 +1,4 @@
-{% set version = "2.1" %}
+{% set version = "2.2" %}
 
 package:
   name: pygmo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: 28aa3175dc37c1a2c8008e1ec15cb46f67255b782d788cd0c40fa934d902e164
+  sha256: 5d18c2bb97f7afe36bc6a7ce3bbf9222220676f7710e3767e05d55305d880867
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - dill
     - ipyparallel
     - python
+    - ipopt             # [unix]
   run:
     - nlopt
     - boost     1.63.*
@@ -30,6 +31,7 @@ requirements:
     - dill
     - ipyparallel
     - python
+    - ipopt             # [unix]
 
 about:
   home: https://esa.github.io/pagmo2/
