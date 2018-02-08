@@ -9,7 +9,7 @@ source:
   sha256: 5f03897d3e315328533d6ac05aea1d7729541cbc8e10dee766647fa301131d5a
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and py<36) or win32]
 
 requirements:
@@ -19,7 +19,7 @@ requirements:
     - pagmo     {{ version }}
     - eigen
     - nlopt
-    - boost     1.65.1
+    - boost     1.66.0
     - numpy     x.x
     - cloudpickle
     - ipyparallel
@@ -28,7 +28,7 @@ requirements:
   run:
     - pagmo     {{ version }}
     - nlopt
-    - boost     1.65.1
+    - boost     1.66.0
     - numpy     x.x
     - cloudpickle
     - ipyparallel
