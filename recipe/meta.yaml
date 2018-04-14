@@ -20,7 +20,7 @@ requirements:
     - eigen
     - nlopt
     - boost     1.66.0
-    - numpy     x.x
+    - numpy 1.11.*
     - cloudpickle
     - ipyparallel
     - python
@@ -29,7 +29,7 @@ requirements:
     - pagmo     {{ version }}
     - nlopt
     - boost     1.66.0
-    - numpy     x.x
+    - numpy >=1.11
     - cloudpickle
     - ipyparallel
     - python
