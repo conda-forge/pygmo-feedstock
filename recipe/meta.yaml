@@ -1,4 +1,4 @@
-{% set version = "2.6" %}
+{% set version = "2.7" %}
 
 package:
   name: pygmo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: 5f03897d3e315328533d6ac05aea1d7729541cbc8e10dee766647fa301131d5a
+  sha256: cbb29022057185dff81958cfec8ba15b700ffc45bc5caf87fd6676f37e3b6f8f
 
 build:
-  number: 1
+  number: 0
   skip: true  # [(win and py<36) or win32]
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - eigen
     - nlopt
     - boost     1.66.0
-    - numpy     x.x
+    - numpy 1.11.*
     - cloudpickle
     - ipyparallel
     - python
@@ -29,7 +29,7 @@ requirements:
     - pagmo     {{ version }}
     - nlopt
     - boost     1.66.0
-    - numpy     x.x
+    - numpy >=1.11
     - cloudpickle
     - ipyparallel
     - python
