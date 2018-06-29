@@ -14,14 +14,16 @@ Summary: A C++ / Python platform to perform parallel computations of optimisatio
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pygmo-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pygmo-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pygmo-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pygmo-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pygmo-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pygmo-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pygmo-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pygmo-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pygmo-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pygmo-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pygmo-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pygmo-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pygmo/badges/version.svg)](https://anaconda.org/conda-forge/pygmo)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pygmo/badges/downloads.svg)](https://anaconda.org/conda-forge/pygmo)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pygmo-green.svg)](https://anaconda.org/conda-forge/pygmo) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pygmo.svg)](https://anaconda.org/conda-forge/pygmo) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pygmo.svg)](https://anaconda.org/conda-forge/pygmo) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pygmo.svg)](https://anaconda.org/conda-forge/pygmo) |
 
 Installing pygmo
 ================
