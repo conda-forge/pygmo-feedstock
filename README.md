@@ -1,6 +1,6 @@
 About pygmo
 ===========
-
+ 
 Home: https://esa.github.io/pagmo2/
 
 Package license: GPL v3 and LGPL v3
