@@ -14,13 +14,15 @@ build:
 
 requirements:
   build:
-    - toolchain
     - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - pagmo     {{ version }}
     - eigen
     - nlopt
-    - boost     1.66.0
-    - numpy 1.11.*
+    - boost
+    - numpy
     - cloudpickle
     - ipyparallel
     - python
@@ -28,8 +30,8 @@ requirements:
   run:
     - pagmo     {{ version }}
     - nlopt
-    - boost     1.66.0
-    - numpy >=1.11
+    - boost
+    - {{ pin_compatible('numpy') }}
     - cloudpickle
     - ipyparallel
     - python
