@@ -1,17 +1,21 @@
 boost:
 - 1.68.0
+build_number_decrement:
+- '0'
 c_compiler:
-- vs2015
+- gcc
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/gcc7,defaults
 channel_targets:
-- conda-forge main
+- conda-forge gcc7
 cxx_compiler:
-- vs2015
+- gxx
+docker_image:
+- condaforge/linux-anvil-comp7
 nlopt:
 - 2.5.*
 numpy:
-- '1.11'
+- '1.9'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -23,6 +27,9 @@ pin_run_as_build:
 python:
 - '3.6'
 zip_keys:
-- - python
-  - c_compiler
+- - c_compiler
   - cxx_compiler
+  - channel_sources
+  - channel_targets
+  - docker_image
+  - build_number_decrement
