@@ -1,3 +1,5 @@
+CMAKE_GENERATOR:
+- NMake Makefiles
 boost:
 - 1.68.0
 c_compiler:
@@ -8,14 +10,10 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2015
-nlopt:
-- 2.5.*
 numpy:
 - '1.11'
 pin_run_as_build:
   boost:
-    max_pin: x.x.x
-  nlopt:
     max_pin: x.x.x
   python:
     min_pin: x.x
