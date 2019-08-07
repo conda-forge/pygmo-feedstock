@@ -1,4 +1,4 @@
-{% set version = "2.10" %}
+{% set version = "2.11" %}
 
 package:
   name: pygmo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: 2fa95e2b464ddeadb9fc09bd314081293f02a1b6abc11c0b05064729a077227c
+  sha256: 392abec3e2e1c1dc5d1e61de62e8e5aaf44a6b8627a665efa22cbaafd2ce6e69
 
 build:
-  number: 1003
+  number: 0
   skip: true  # [(win and py<35) or win32]
 
 requirements:
