@@ -10,6 +10,4 @@ cmake ^
     -DPAGMO_BUILD_PYGMO=yes ^
     ..
 
-cmake --build . --config Release
-
 cmake --build . --config Release --target install
