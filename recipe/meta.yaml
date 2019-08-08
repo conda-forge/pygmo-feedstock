@@ -20,6 +20,7 @@ requirements:
   host:
     - pagmo     {{ version }}
     - boost
+    - boost-cpp
     - numpy
     - cloudpickle
     - ipyparallel
@@ -27,6 +28,7 @@ requirements:
   run:
     - pagmo     {{ version }}
     - boost
+    - boost-cpp
     - {{ pin_compatible('numpy') }}
     - cloudpickle
     - ipyparallel
