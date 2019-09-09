@@ -1,4 +1,4 @@
-{% set version = "2.11.2" %}
+{% set version = "2.11.3" %}
 
 package:
   name: pygmo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: fb21c515534a11a37372e578b2fd7b389ee8dae0f89a6f4b3dd881a977ad0631
+  sha256: 5ba37ee671951e12c487932f0c26f647926dd133133cc5a1dd59d481bcc7e896
 
 build:
   number: 0
