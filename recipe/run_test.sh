@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-ipcluster start --daemonize=True;
+# Fetch the Python version.
+PYTHON_VER=`python -c "import sys; print('{}.{}'.format(sys.version_info.major,sys.version_info.minor))"`
 
-# Give some time for the cluster to start up.
-sleep 20;
+if [[ "${PYTHON_VER}" != "3.8" ]]; then
+    ipcluster start --daemonize=True;
+    # Give some time for the cluster to start up.
+    sleep 20;
+fi
 
 # Run the test suite
-python -c "import pygmo; pygmo.test.run_test_suite()"
+python -c "import pygmo; pygmo.test.run_test_suite(); pygmo.mp_island.shutdown_pool()"
