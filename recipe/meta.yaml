@@ -9,7 +9,7 @@ source:
   sha256: 7756cf4b4a427a856137c40c3fdf27422fcf546249b70f9ba4c213ef1fbee051
 
 build:
-  number: 1
+  number: 2
   skip: true  # [(win and py<35) or win32]
 
 requirements:
@@ -18,7 +18,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - pagmo     {{ version }}
+    - pagmo-devel
     - boost
     - boost-cpp
     - numpy
@@ -26,7 +26,6 @@ requirements:
     - ipyparallel  # [py<38]
     - python
   run:
-    - pagmo     {{ version }}
     - boost
     - boost-cpp
     - {{ pin_compatible('numpy') }}
