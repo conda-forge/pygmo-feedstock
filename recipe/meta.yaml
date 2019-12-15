@@ -19,7 +19,7 @@ build:
     # Thus, remove them from the runtime
     # requirements.
     - nlopt
-    - ipopt  # [win]
+    - ipopt  # [unix]
 
 requirements:
   build:
