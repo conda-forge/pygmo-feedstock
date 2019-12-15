@@ -9,8 +9,17 @@ source:
   sha256: 7756cf4b4a427a856137c40c3fdf27422fcf546249b70f9ba4c213ef1fbee051
 
 build:
-  number: 2
+  number: 3
   skip: true  # [(win and py<35) or win32]
+  ignore_run_exports:
+    # pagmo-devel will automatically
+    # put nlopt and ipopt as run dependencies,
+    # but we don't actually need any symbol
+    # from these libraries in pygmo's module.
+    # Thus, remove them from the runtime
+    # requirements.
+    - nlopt
+    - ipopt  # [win]
 
 requirements:
   build:
