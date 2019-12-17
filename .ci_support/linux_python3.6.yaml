@@ -16,12 +16,16 @@ cxx_compiler_version:
 - '7'
 docker_image:
 - condaforge/linux-anvil-comp7
+nlopt:
+- 2.6.*
 numpy:
 - '1.14'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
   boost-cpp:
+    max_pin: x.x.x
+  nlopt:
     max_pin: x.x.x
   python:
     min_pin: x.x
