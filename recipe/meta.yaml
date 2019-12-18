@@ -1,4 +1,4 @@
-{% set version = "2.11.4" %}
+{% set version = "2.12.0" %}
 
 package:
   name: pygmo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: 7756cf4b4a427a856137c40c3fdf27422fcf546249b70f9ba4c213ef1fbee051
+  sha256: bd1dfb1d7022899d10f30f7bf6571f922c39cf951be1c010c8f9244de7be1610
 
 build:
-  number: 3
+  number: 0
   skip: true  # [(win and py<35) or win32]
   ignore_run_exports:
     # pagmo-devel will automatically
