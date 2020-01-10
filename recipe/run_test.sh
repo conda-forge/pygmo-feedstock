@@ -10,4 +10,4 @@ if [[ "${PYTHON_VER}" != "3.8" ]]; then
 fi
 
 # Run the test suite
-python -c "import pygmo; pygmo.test.run_test_suite(); pygmo.mp_island.shutdown_pool()"
+python -c "import pygmo; pygmo.test.run_test_suite(); pygmo.mp_island.shutdown_pool(); pygmo.mp_bfe.shutdown_pool()"
