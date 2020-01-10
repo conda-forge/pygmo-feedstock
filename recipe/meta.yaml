@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [(win and py<35) or win32]
+  skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
