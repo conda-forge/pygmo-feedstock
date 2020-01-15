@@ -24,8 +24,9 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('c') }}              # [not win]
+    - vs2017_{{ target_platform  }}    # [win]
   host:
     - pagmo-devel
     - boost
