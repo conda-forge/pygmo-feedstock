@@ -2,14 +2,10 @@ boost:
 - 1.70.0
 boost_cpp:
 - 1.70.0
-c_compiler:
-- vs2015
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-cxx_compiler:
-- vs2015
 nlopt:
 - 2.6.*
 numpy:
@@ -25,8 +21,6 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.8'
-zip_keys:
-- - python
-  - c_compiler
-  - cxx_compiler
+- '3.7'
+target_platform:
+- win-64
