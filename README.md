@@ -71,24 +71,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015python3.6</td>
+              <td>win_python3.6target_platformwin-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5019&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pygmo-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015python3.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pygmo-feedstock?branchName=master&jobName=win&configuration=win_python3.6target_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015python3.7</td>
+              <td>win_python3.7target_platformwin-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5019&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pygmo-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015python3.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pygmo-feedstock?branchName=master&jobName=win&configuration=win_python3.7target_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015python3.8</td>
+              <td>win_python3.8target_platformwin-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5019&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pygmo-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015python3.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pygmo-feedstock?branchName=master&jobName=win&configuration=win_python3.8target_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr>
