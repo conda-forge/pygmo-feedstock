@@ -1,4 +1,4 @@
-{% set version = "2.13.0" %}
+{% set version = "2.14.0" %}
 
 package:
   name: pygmo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: 4431e61cae9f27b692b78b30e2a08362dfd35960c3840dae04ef28af8305e621
+  sha256: fdb86118812b3885b0c10cd816ec90590a617b5b009b64f1c64635ad2953592d
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
@@ -47,7 +47,7 @@ about:
   home: https://esa.github.io/pagmo2/
   license: GPL v3 and LGPL v3
   license_file: COPYING.lgpl3
-  summary: 'A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model'
+  summary: A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model
 
 extra:
   recipe-maintainers:
