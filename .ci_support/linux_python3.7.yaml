@@ -1,5 +1,3 @@
-boost:
-- '1.72'
 boost_cpp:
 - '1.72'
 c_compiler:
@@ -21,8 +19,6 @@ nlopt:
 numpy:
 - '1.14'
 pin_run_as_build:
-  boost:
-    max_pin: x.x.x
   boost-cpp:
     max_pin: x.x.x
   nlopt:

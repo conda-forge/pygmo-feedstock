@@ -1,15 +1,15 @@
-{% set version = "2.13.0" %}
+{% set version = "2.14.0" %}
 
 package:
   name: pygmo
   version: {{ version }}
 
 source:
-  url: https://github.com/esa/pagmo2/archive/v{{ version }}.tar.gz
-  sha256: 4431e61cae9f27b692b78b30e2a08362dfd35960c3840dae04ef28af8305e621
+  url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
+  sha256: 72000a0c6bd22b8955a65ebfcb53a8f42e8b00fd16afc0b7b43ef74b14883d60
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
@@ -29,14 +29,13 @@ requirements:
     - vs2017_{{ target_platform  }}    # [win]
   host:
     - pagmo-devel
-    - boost
+    - pybind11
     - boost-cpp
     - numpy
     - cloudpickle
     - ipyparallel  # [py<38]
     - python
   run:
-    - {{ pin_compatible('boost', max_pin='x.x') }}
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
     - cloudpickle
@@ -44,10 +43,10 @@ requirements:
     - python
 
 about:
-  home: https://esa.github.io/pagmo2/
-  license: GPL v3 and LGPL v3
-  license_file: COPYING.lgpl3
-  summary: 'A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model'
+  home: https://esa.github.io/pygmo2/
+  license: MPL-2.0
+  license_file: LICENSE
+  summary: A Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model
 
 extra:
   recipe-maintainers:
