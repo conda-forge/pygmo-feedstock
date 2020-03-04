@@ -28,8 +28,7 @@ requirements:
     - {{ compiler('c') }}              # [not win]
     - vs2017_{{ target_platform  }}    # [win]
   host:
-    # Version requirement is temporary.
-    - pagmo-devel >=2.14.0
+    - pagmo-devel
     - pybind11
     - boost-cpp
     - numpy
