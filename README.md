@@ -1,13 +1,13 @@
 About pygmo
 ===========
 
-Home: https://esa.github.io/pagmo2/
+Home: https://esa.github.io/pygmo2/
 
-Package license: GPL v3 and LGPL v3
+Package license: MPL-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: A C++ / Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model
+Summary: A Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model
 
 
 
