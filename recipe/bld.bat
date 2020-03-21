@@ -1,5 +1,6 @@
 mkdir build
 cd build
+SET PYGMO_BUILD_DIR=%cd%
 
 git clone https://github.com/pybind/pybind11.git
 cd pybind11
@@ -9,8 +10,8 @@ cd build
 cmake ^
     -G "Ninja" ^
     -DPYBIND11_TEST=NO ^
-    -DCMAKE_INSTALL_PREFIX=%PREFIX% ^
-    -DCMAKE_PREFIX_PATH=%PREFIX% ^
+    -DCMAKE_INSTALL_PREFIX=%PYGMO_BUILD_DIR% ^
+    -DCMAKE_PREFIX_PATH=%PYGMO_BUILD_DIR% ^
     -DCMAKE_BUILD_TYPE=Release ^
     ..
 cmake --build . --target install
@@ -22,6 +23,7 @@ cmake ^
     -DBoost_NO_BOOST_CMAKE=ON ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+    -Dpybind11_DIR=%PYGMO_BUILD_DIR%\share\cmake\pybind11\ ^
     ..
 
 cmake --build . --config RelWithDebInfo --target install
