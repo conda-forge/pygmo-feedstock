@@ -24,6 +24,7 @@ cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
+    -Dpybind11_DIR=$PYGMO_BUILD_DIR/share/cmake/pybind11/ \
     ..
 
 make
