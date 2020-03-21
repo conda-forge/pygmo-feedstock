@@ -9,7 +9,7 @@ source:
   sha256: 72000a0c6bd22b8955a65ebfcb53a8f42e8b00fd16afc0b7b43ef74b14883d60
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
@@ -29,7 +29,6 @@ requirements:
     - vs2017_{{ target_platform  }}    # [win]
   host:
     - pagmo-devel
-    - pybind11
     - boost-cpp
     - numpy
     - cloudpickle
