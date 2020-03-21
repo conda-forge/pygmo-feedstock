@@ -29,7 +29,6 @@ requirements:
     - vs2017_{{ target_platform  }}    # [win]
   host:
     - pagmo-devel
-    - pybind11
     - boost-cpp
     - numpy
     - cloudpickle
