@@ -1,4 +1,4 @@
-{% set version = "2.14.0" %}
+{% set version = "2.15.0" %}
 
 package:
   name: pygmo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
-  sha256: 72000a0c6bd22b8955a65ebfcb53a8f42e8b00fd16afc0b7b43ef74b14883d60
+  sha256: 0f45636d47d5309f5f3d771e6677437f9d8de96cbad8b4f2758fa79c856022cc
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
@@ -34,12 +34,14 @@ requirements:
     - cloudpickle
     - ipyparallel  # [py<38]
     - python
+    - networkx
   run:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
     - cloudpickle
     - ipyparallel  # [py<38]
     - python
+    - networkx
 
 about:
   home: https://esa.github.io/pygmo2/
