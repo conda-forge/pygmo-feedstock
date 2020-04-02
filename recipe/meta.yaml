@@ -34,12 +34,14 @@ requirements:
     - cloudpickle
     - ipyparallel  # [py<38]
     - python
+    - networkx
   run:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
     - cloudpickle
     - ipyparallel  # [py<38]
     - python
+    - networkx
 
 about:
   home: https://esa.github.io/pygmo2/
