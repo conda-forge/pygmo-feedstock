@@ -9,7 +9,7 @@ source:
   sha256: 0f45636d47d5309f5f3d771e6677437f9d8de96cbad8b4f2758fa79c856022cc
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
@@ -26,7 +26,7 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('c') }}              # [not win]
-    - vs2017_{{ target_platform  }}    # [win]
+    - vs2017_{{ target_platform }}    # [win]
   host:
     - pagmo-devel
     - boost-cpp
