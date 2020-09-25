@@ -1,4 +1,4 @@
-{% set version = "2.15.0" %}
+{% set version = "2.16.0" %}
 
 package:
   name: pygmo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
-  sha256: 0f45636d47d5309f5f3d771e6677437f9d8de96cbad8b4f2758fa79c856022cc
+  sha256: 9b202fa329186f9ba8297f640f885f009876ee0884789fa972636c401b5ce8b8
 
 build:
   number: 0
@@ -24,9 +24,8 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('c') }}              # [not win]
-    - vs2017_{{ target_platform  }}    # [win]
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
   host:
     - pagmo-devel
     - boost-cpp
@@ -35,6 +34,7 @@ requirements:
     - ipyparallel  # [py<38]
     - python
     - networkx
+    - scipy
   run:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
@@ -42,6 +42,7 @@ requirements:
     - ipyparallel  # [py<38]
     - python
     - networkx
+    - scipy
 
 about:
   home: https://esa.github.io/pygmo2/
