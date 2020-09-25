@@ -2,6 +2,16 @@
 
 mkdir build
 cd build
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    export AR_CMAKE_SETTING=
+    export RANLIB_CMAKE_SETTING=
+else
+    # Workaround for making the LTO machinery work on Linux.
+    export AR_CMAKE_SETTING="-DCMAKE_CXX_COMPILER_AR=$GCC_AR -DCMAKE_C_COMPILER_AR=$GCC_AR"
+    export RANLIB_CMAKE_SETTING="-DCMAKE_CXX_COMPILER_RANLIB=$GCC_RANLIB -DCMAKE_C_COMPILER_RANLIB=$GCC_RANLIB"
+fi
+
 export PYGMO_BUILD_DIR=`pwd`
 
 git clone https://github.com/pybind/pybind11.git
@@ -23,8 +33,10 @@ cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
-    -DCMAKE_CXX_STANDARD=17 \
     -Dpybind11_DIR=$PYGMO_BUILD_DIR/share/cmake/pybind11/ \
+    -DPYGMO_ENABLE_IPO=yes \
+    $AR_CMAKE_SETTING \
+    $RANLIB_CMAKE_SETTING \
     ..
 
 make
