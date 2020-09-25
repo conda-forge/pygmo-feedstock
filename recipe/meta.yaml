@@ -34,6 +34,7 @@ requirements:
     - ipyparallel  # [py<38]
     - python
     - networkx
+    - scipy
   run:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
@@ -41,6 +42,7 @@ requirements:
     - ipyparallel  # [py<38]
     - python
     - networkx
+    - scipy
 
 about:
   home: https://esa.github.io/pygmo2/
