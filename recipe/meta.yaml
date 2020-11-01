@@ -9,7 +9,7 @@ source:
   sha256: 9b202fa329186f9ba8297f640f885f009876ee0884789fa972636c401b5ce8b8
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<35]
   ignore_run_exports:
     # pagmo-devel will automatically
