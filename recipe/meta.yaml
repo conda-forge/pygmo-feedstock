@@ -19,7 +19,7 @@ build:
     # Thus, remove them from the runtime
     # requirements.
     - nlopt
-    - ipopt  # [unix]
+    - ipopt
 
 requirements:
   build:
@@ -27,11 +27,12 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
   host:
+    - pybind11-abi
     - pagmo-devel
     - boost-cpp
     - numpy
     - cloudpickle
-    - ipyparallel  # [py!=38]
+    - ipyparallel
     - python
     - networkx
     - scipy
@@ -39,7 +40,7 @@ requirements:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
     - cloudpickle
-    - ipyparallel  # [py!=38]
+    - ipyparallel
     - python
     - networkx
     - scipy
