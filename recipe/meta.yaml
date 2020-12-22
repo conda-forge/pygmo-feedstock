@@ -27,6 +27,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
   host:
+    - pybind11
     - pybind11-abi
     - pagmo-devel
     - boost-cpp
