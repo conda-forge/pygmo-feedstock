@@ -4,8 +4,9 @@ mkdir build
 cd build
 
 cmake ${CMAKE_ARGS} \
-    -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_BUILD_TYPE=Release \
+    -DPython3_EXECUTABLE=$PREFIX/bin/python \
+    -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DPYGMO_ENABLE_IPO=yes \
