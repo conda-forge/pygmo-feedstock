@@ -1,4 +1,4 @@
-{% set version = "2.16.1" %}
+{% set version = "2.18.0" %}
 
 package:
   name: pygmo
@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
-  sha256: 54d4fa99e4bff539fca67dfcdc909499fd3f1a3186f7c7fc8200f19512954166
+  sha256: 9f081cc973297894af09f713f889870ac452bfb32b471f9f7ba08a5e0bb9a125
 
 build:
-  number: 1
-  skip: true  # [py<35]
+  number: 0
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
@@ -26,10 +25,11 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - make    # [unix]
   host:
     - pybind11
     - pybind11-abi
-    - pagmo-devel
+    - pagmo-devel >=2.18.0
     - boost-cpp
     - numpy
     - cloudpickle
