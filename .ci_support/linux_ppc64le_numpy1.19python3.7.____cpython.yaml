@@ -3,7 +3,7 @@ boost_cpp:
 c_compiler:
 - gcc
 c_compiler_version:
-- '9'
+- '10'
 cdt_name:
 - cos7
 channel_sources:
@@ -13,15 +13,15 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '9'
+- '10'
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 ipopt:
-- '3.14'
+- 3.14.8
 nlopt:
 - '2.7'
 numpy:
-- '1.18'
+- '1.19'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
