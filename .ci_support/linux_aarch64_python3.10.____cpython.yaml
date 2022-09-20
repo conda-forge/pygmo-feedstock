@@ -21,11 +21,9 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 ipopt:
-- 3.14.8
+- 3.14.9
 nlopt:
 - '2.7'
-numpy:
-- '1.21'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -43,5 +41,3 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - numpy

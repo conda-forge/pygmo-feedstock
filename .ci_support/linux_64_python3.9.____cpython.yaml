@@ -1,27 +1,25 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 boost_cpp:
 - 1.74.0
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '14'
+- '10'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '14'
+- '10'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 ipopt:
-- 3.14.8
-macos_machine:
-- x86_64-apple-darwin13.4.0
+- 3.14.9
 nlopt:
 - '2.7'
-numpy:
-- '1.19'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -35,9 +33,7 @@ pybind11_abi:
 python:
 - 3.9.* *_cpython
 target_platform:
-- osx-64
+- linux-64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - numpy
