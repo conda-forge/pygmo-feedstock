@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
   sha256: 9f081cc973297894af09f713f889870ac452bfb32b471f9f7ba08a5e0bb9a125
+  patches:
+    - exc_fix.diff
 
 build:
-  number: 1
+  number: 2
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
@@ -24,11 +26,9 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - cmake
     - {{ compiler('cxx') }}
@@ -40,14 +40,13 @@ requirements:
     - pybind11-abi
     - pagmo-devel >=2.18.0
     - boost-cpp
-    - numpy
     - cloudpickle
     - ipyparallel
     - networkx
     - scipy
   run:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - cloudpickle
     - ipyparallel
     - python

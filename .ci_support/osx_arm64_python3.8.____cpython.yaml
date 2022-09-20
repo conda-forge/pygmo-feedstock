@@ -1,11 +1,11 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '11.0'
 boost_cpp:
 - 1.74.0
 c_compiler:
 - clang
 c_compiler_version:
-- '11'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -13,15 +13,13 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '11'
+- '14'
 ipopt:
-- '3.14'
+- 3.14.9
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 nlopt:
 - '2.7'
-numpy:
-- '1.18'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -35,9 +33,7 @@ pybind11_abi:
 python:
 - 3.8.* *_cpython
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - numpy

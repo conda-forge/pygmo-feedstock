@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# IPO setup.
+if test "$target_platform" != "linux-ppc64le"
+then
+  CMAKE_ARGS="${CMAKE_ARGS} -DPYGMO_ENABLE_IPO=ON"
+fi
+
 mkdir build
 cd build
 
@@ -9,7 +15,6 @@ cmake ${CMAKE_ARGS} \
     -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
-    -DPYGMO_ENABLE_IPO=yes \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
