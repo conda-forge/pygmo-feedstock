@@ -3,7 +3,7 @@
 # IPO setup.
 if test "$target_platform" != "linux-ppc64le"
 then
-  CMAKE_ARGS="${CMAKE_ARGS} -DPAGMO_ENABLE_IPO=ON"
+  CMAKE_ARGS="${CMAKE_ARGS} -DPYGMO_ENABLE_IPO=ON"
 fi
 
 mkdir build
