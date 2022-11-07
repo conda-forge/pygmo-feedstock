@@ -15,15 +15,13 @@ cxx_compiler:
 cxx_compiler_version:
 - '14'
 ipopt:
-- 3.14.9
+- 3.14.10
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nlopt:
 - '2.7'
 pin_run_as_build:
   boost-cpp:
-    max_pin: x.x.x
-  nlopt:
     max_pin: x.x.x
   python:
     min_pin: x.x

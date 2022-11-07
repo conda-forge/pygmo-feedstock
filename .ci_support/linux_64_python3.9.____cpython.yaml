@@ -17,13 +17,11 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 ipopt:
-- 3.14.9
+- 3.14.10
 nlopt:
 - '2.7'
 pin_run_as_build:
   boost-cpp:
-    max_pin: x.x.x
-  nlopt:
     max_pin: x.x.x
   python:
     min_pin: x.x
