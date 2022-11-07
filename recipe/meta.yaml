@@ -11,7 +11,7 @@ source:
     - exc_fix.diff
 
 build:
-  number: 3
+  number: 4
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
