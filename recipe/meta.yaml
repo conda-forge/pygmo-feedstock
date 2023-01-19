@@ -1,4 +1,4 @@
-{% set version = "2.18.0" %}
+{% set version = "2.19.0" %}
 
 package:
   name: pygmo
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
-  sha256: 9f081cc973297894af09f713f889870ac452bfb32b471f9f7ba08a5e0bb9a125
+  sha256: 96b3e412fd264ca74204b6d66aec51c67a7a6909501deae0e4bc263b88e4f176
   patches:
     - exc_fix.diff
 
 build:
-  number: 4
+  number: 0
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
