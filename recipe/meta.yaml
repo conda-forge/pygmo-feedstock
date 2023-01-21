@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
   sha256: 96b3e412fd264ca74204b6d66aec51c67a7a6909501deae0e4bc263b88e4f176
-  patches:
-    - exc_fix.diff
 
 build:
   number: 0
@@ -30,7 +28,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11 >=2.10                        # [build_platform != target_platform]
-    - cmake >=3.17
+    - cmake >=3.18
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - make    # [unix]
@@ -38,7 +36,7 @@ requirements:
     - python
     - pybind11 >=2.10
     - pybind11-abi
-    - pagmo-devel >=2.18.0
+    - pagmo-devel =2.19.*
     - boost-cpp
     - cloudpickle
     - ipyparallel
