@@ -1,0 +1,42 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d46e20f..7b819cb 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -136,12 +136,35 @@ if(${pagmo_VERSION} VERSION_LESS ${_PYGMO_MIN_PAGMO_VERSION})
+     message(FATAL_ERROR "The minimum pagmo version required by pygmo is ${_PYGMO_MIN_PAGMO_VERSION}, but version ${pagmo_VERSION} was found instead.")
+ endif()
+ 
+-# python.
+-find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
++# Python.
++
++# Setup the list of Python components we need to locate.
++set(_PYGMO_PYTHON3_COMPONENTS Interpreter Development.Module)
++
++# NOTE: strictly speaking, we should need only the Interpreter and Development.Module
++# components to build pygmo. However, in certain setups (e.g., skbuild), it looks
++# like if we specify only Development.Module CMake is unable to correctly locate
++# the Python installation. Hence, as a workaround, if the following line fails
++# and Python3 is *not* found, we try again, this time with the full Development
++# component (rather than only Development.Module). This seems to work around the
++# issue, for now at least.
++find_package(Python3 QUIET COMPONENTS ${_PYGMO_PYTHON3_COMPONENTS})
++
++if(NOT Python3_FOUND)
++    list(POP_BACK _PYGMO_PYTHON3_COMPONENTS)
++    list(APPEND _PYGMO_PYTHON3_COMPONENTS Development)
++endif()
++
++find_package(Python3 QUIET REQUIRED COMPONENTS ${_PYGMO_PYTHON3_COMPONENTS})
++
+ message(STATUS "Python3 interpreter: ${Python3_EXECUTABLE}")
+ message(STATUS "Python3 installation directory: ${Python3_SITEARCH}")
++if(${Python3_VERSION_MINOR} LESS 5)
++    message(FATAL_ERROR "The minimum supported version of Python is 3.5, but version 3.${Python3_VERSION_MINOR} was found instead")
++endif()
+ set(PYGMO_INSTALL_PATH "" CACHE STRING "pygmo module installation path")
+ mark_as_advanced(PYGMO_INSTALL_PATH)
++unset(_PYGMO_PYTHON3_COMPONENTS)
+ 
+ # Boost setup.
+ include(PygmoFindBoost)
