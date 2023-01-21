@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
   sha256: 96b3e412fd264ca74204b6d66aec51c67a7a6909501deae0e4bc263b88e4f176
+  patches:
+    - find_python_fix.diff
 
 build:
   number: 0
