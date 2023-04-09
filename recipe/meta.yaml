@@ -1,4 +1,4 @@
-{% set version = "2.19.0" %}
+{% set version = "2.19.3" %}
 
 package:
   name: pygmo
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/esa/pygmo2/archive/v{{ version }}.tar.gz
-  sha256: 96b3e412fd264ca74204b6d66aec51c67a7a6909501deae0e4bc263b88e4f176
+  sha256: 40c3bcaaa0938a1acea1c31400f0d015faa38ae82fee8686cae392728e73e96f
   patches:
     - find_python_fix.diff
 
