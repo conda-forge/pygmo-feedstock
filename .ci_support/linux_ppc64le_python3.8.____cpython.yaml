@@ -17,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 ipopt:
-- 3.14.10
+- 3.14.11
 nlopt:
 - '2.7'
 pin_run_as_build:
