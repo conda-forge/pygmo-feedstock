@@ -1,11 +1,11 @@
-About pygmo
-===========
+About pygmo-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygmo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://esa.github.io/pygmo2/
 
 Package license: MPL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygmo-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python platform to perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model
 

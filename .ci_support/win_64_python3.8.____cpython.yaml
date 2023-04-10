@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 ipopt:
-- 3.14.10
+- 3.14.11
 nlopt:
 - '2.7'
 pin_run_as_build:
