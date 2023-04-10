@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '14'
 ipopt:
-- 3.14.10
+- 3.14.11
 macos_machine:
 - arm64-apple-darwin20.0.0
 nlopt:
