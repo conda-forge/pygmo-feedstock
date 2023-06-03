@@ -11,7 +11,7 @@ source:
     - find_python_fix.diff
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
@@ -24,9 +24,6 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11 >=2.10                        # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11 >=2.10                        # [build_platform != target_platform]
