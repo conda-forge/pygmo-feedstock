@@ -11,7 +11,7 @@ source:
     - find_python_fix.diff
 
 build:
-  number: 1
+  number: 2
   ignore_run_exports:
     # pagmo-devel will automatically
     # put nlopt and ipopt as run dependencies,
@@ -36,13 +36,12 @@ requirements:
     - pybind11 >=2.10
     - pybind11-abi
     - pagmo-devel =2.19.*
-    - boost-cpp
+    - libboost-devel
     - cloudpickle
     - ipyparallel
     - networkx
     - scipy
   run:
-    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - numpy
     - cloudpickle
     - ipyparallel
