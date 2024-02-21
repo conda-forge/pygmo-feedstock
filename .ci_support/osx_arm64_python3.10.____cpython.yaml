@@ -13,7 +13,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '16'
 ipopt:
-- 3.14.12
+- 3.14.14
 libboost_devel:
 - '1.82'
 macos_machine:
