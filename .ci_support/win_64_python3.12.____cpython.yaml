@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 ipopt:
-- 3.14.14
+- 3.14.16
 libboost_devel:
 - '1.84'
 nlopt:
