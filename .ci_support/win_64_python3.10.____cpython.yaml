@@ -13,7 +13,7 @@ ipopt:
 libboost_devel:
 - '1.86'
 nlopt:
-- '2.7'
+- '2.8'
 pin_run_as_build:
   python:
     min_pin: x.x
