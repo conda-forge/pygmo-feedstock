@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # IPO setup.
-if test "$target_platform" != "linux-ppc64le"
-then
+if [[ "$target_platform" != "linux-ppc64le" && "$target_platform" != "osx-arm64" ]]; then
   CMAKE_ARGS="${CMAKE_ARGS} -DPYGMO_ENABLE_IPO=ON"
 fi
 
