@@ -19,7 +19,7 @@ docker_image:
 ipopt:
 - 3.14.19
 libboost_devel:
-- '1.88'
+- '1.90'
 nlopt:
 - '2.10'
 pin_run_as_build:
