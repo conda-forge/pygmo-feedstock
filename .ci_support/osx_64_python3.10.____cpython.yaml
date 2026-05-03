@@ -21,7 +21,7 @@ cxx_compiler_version:
 ipopt:
 - 3.14.19
 libboost_devel:
-- '1.88'
+- '1.90'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nlopt:
