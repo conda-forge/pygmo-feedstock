@@ -36,7 +36,7 @@ requirements:
     - python
     - pybind11 >=2.10
     - pybind11-abi
-    - pagmo-devel =2.19.*
+    - pagmo-devel =2.20.*
     - libboost-devel
     - cloudpickle
     - ipyparallel
