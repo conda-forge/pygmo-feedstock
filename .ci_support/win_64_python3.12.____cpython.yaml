@@ -1,5 +1,7 @@
 c_compiler:
-- vs2022
+- vs
+c_compiler_version:
+- '2022'
 c_stdlib:
 - vs
 channel_sources:
@@ -7,9 +9,11 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 ipopt:
-- 3.14.19
+- 3.14.20
 libboost_devel:
 - '1.90'
 nlopt:
@@ -19,11 +23,8 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 pybind11_abi:
-- '11'
+- '12'
 python:
 - 3.12.* *_cpython
 target_platform:
 - win-64
-zip_keys:
-- - python
-  - channel_sources
